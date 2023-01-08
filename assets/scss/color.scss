@@ -1,0 +1,33 @@
+$base-bg: linear-gradient(0deg, #000000 0%, #28190c 63.54%, #3a2c00 100%);
+$white: #f2f2f2;
+$bg-input: rgba(252, 252, 252, 0.1);
+$border-input: rgba(242, 201, 76, 0.3);
+$bg-orange-gradient: linear-gradient(
+  5.66deg,
+  #c96913 4.48%,
+  #f28727 39.94%,
+  #f29340 76.86%,
+  #ffa800 97.75%
+);
+$orange: #f28727;
+$gray: #969696;
+$gray-bold: rgba(255, 255, 255, 0.12);
+$black: rgba(0, 0, 0, 0.33);
+$black-base: #000000;
+$transparent: rgba(255, 255, 255, 0.1);
+$gold: #f2c94c;
+
+@mixin svg-color-orange {
+  filter: invert(56%) sepia(63%) saturate(1112%) hue-rotate(345deg)
+    brightness(100%) contrast(90%);
+}
+
+@mixin svg-color-white {
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(353deg)
+    brightness(107%) contrast(101%);
+}
+
+@mixin svg-color-gold {
+  filter: invert(91%) sepia(89%) saturate(4223%) hue-rotate(320deg)
+    brightness(102%) contrast(90%);
+}

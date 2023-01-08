@@ -1,0 +1,444 @@
+@import "scss/color.scss", "scss/text.scss";
+* {
+  font-family: "Prompt";
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  background: $base-bg;
+  height: 100vh;
+  overflow: hidden;
+  body {
+    height: 100%;
+    max-width: 1080px;
+    margin: 0 auto !important;
+    float: none !important;
+    overflow: scroll;
+    #__nuxt {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      max-width: 768px;
+      margin: 0 auto;
+    }
+
+    .header-form {
+      flex: 1 1 auto;
+      justify-content: center;
+      display: flex;
+      align-items: flex-end;
+      padding: 0px 20px;
+    }
+    .body-form {
+      flex: 0 0 auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 0px 20px;
+
+      .body-text-title {
+        @include text-md;
+        color: $white;
+        margin: 30px 0;
+      }
+    }
+    .footer-form {
+      flex: 1 1 auto;
+      justify-content: center;
+      display: flex;
+      align-items: flex-end;
+      padding: 0px 20px;
+
+      p {
+        @include text-md;
+        color: $white;
+        margin: 0;
+        padding-bottom: 10px;
+      }
+    }
+
+    .form-body {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+
+    .header-content {
+      display: flex;
+      flex-direction: column;
+      flex: 0 0 auto;
+      padding: 0px 20px;
+      margin-top: 20px;
+
+      .header-bar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 25px;
+        position: relative;
+        .back-button {
+          @include text-sm;
+          color: $white;
+          position: absolute;
+          left: 0;
+          top: 0;
+        }
+        .text-header-bar {
+          @include text-lg-bold;
+          color: $white;
+          flex: 1 1 auto;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        .btn_profile {
+          position: absolute;
+          right: 0;
+          top: 0;
+        }
+      }
+
+      .body-bar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 25px;
+        .body-bar-left {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+        }
+        .body-bar-right {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-end;
+        }
+
+        .body-bar-title {
+          @include text-sm;
+          color: $gray;
+        }
+        .body-bar-content {
+          @include text-lg-bold;
+          color: $white;
+        }
+      }
+
+      .body-bar-profile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .body-bar-profile-name {
+          display: flex;
+          margin-bottom: 10px;
+          @include text-lg-bold;
+          color: $white;
+          span {
+            margin-right: 5px;
+          }
+        }
+        .body-bar-profile-coode {
+          display: flex;
+          border-radius: 10px;
+          background: $transparent;
+          padding: 5px 10px;
+          margin-bottom: 10px;
+          @include text-sm;
+          .body-bar-profile-title {
+            color: $gray;
+            margin-right: 5px;
+          }
+          .body-bar-profile-code {
+            @include text-sm-bold;
+            color: $gold;
+          }
+        }
+      }
+    }
+    .body-content {
+      display: flex;
+      flex-direction: column;
+      flex: 1 1 auto;
+      border-radius: 20px 20px 0 0;
+      background: $black;
+
+      .layout-content {
+        display: flex;
+        flex-direction: column;
+
+        .layout-content-botton-top {
+          padding: 25px 20px;
+          display: flex;
+          justify-content: space-between;
+
+          button {
+            &:first-child {
+              margin: 0 20px 0 0;
+            }
+            &:last-child {
+              margin: 0 0 0 20px;
+            }
+
+            span {
+              margin: 0 10px;
+            }
+            flex: 1 1 auto;
+          }
+        }
+        .layout-content-menu {
+          background: $black-base;
+          display: flex;
+          flex-flow: row wrap;
+          padding: 25px 0px;
+
+          .content-menu {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 20px;
+            align-items: center;
+            width: 25%;
+            .box-img-menu {
+              background: $gray-bold;
+              border-radius: 12px;
+              width: 56px;
+              height: 56px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              margin-bottom: 10px;
+              img {
+                width: 30px;
+                height: 30px;
+              }
+              .color-orange {
+                @include svg-color-orange;
+              }
+              .color-gold {
+                @include svg-color-gold;
+              }
+            }
+            .text-menu {
+              color: $white;
+              @include text-sm-bold;
+              text-align: center;
+            }
+          }
+        }
+
+        .layout-content-game {
+          display: flex;
+          flex-direction: column;
+          padding: 25px 20px;
+          .layout-menu-game {
+            display: flex;
+            background: $black-base;
+            border-radius: 10px;
+            margin: 20px 0;
+            .menu-game {
+              @include text-sm-bold;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              height: 40px;
+              border-radius: 10px;
+              background: none;
+              border: none;
+              flex: 1 1 auto;
+              color: $gray;
+              &.activity {
+                background: $bg-orange-gradient;
+                color: $white;
+                border: 1px solid $orange;
+              }
+            }
+          }
+          .layout-list-game {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+            align-items: center;
+            .layout-box-game {
+              width: 30%;
+              display: flex;
+              justify-content: center;
+              .box-list-game {
+                background: $gray-bold;
+                border-radius: 12px;
+                width: 100%;
+                height: 85px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 10px;
+              }
+            }
+          }
+        }
+
+        .layout-profile-menu {
+          display: flex;
+          flex-direction: column;
+          padding: 0px 20px;
+          margin: 20px 0;
+          .layout-profile-menu-items {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+            .items-box-icon {
+              flex: 0 0 auto;
+              width: 55px;
+              height: 55px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              border-radius: 12px;
+              background: $transparent;
+            }
+            .items-box-content {
+              flex: 1 1 auto;
+              @include text-md-bold;
+              color: $white;
+              padding: 0 20px;
+            }
+            .items-box-action {
+              align-items: center;
+              display: flex;
+              flex: 0 0 auto;
+            }
+          }
+        }
+
+        .layout-withdrow {
+          display: flex;
+          flex-direction: column;
+          padding: 0 20px;
+          margin-top: 20px;
+        }
+      }
+    }
+    .footer-content {
+      display: flex;
+      flex-direction: column;
+      flex: 0 0 auto;
+      align-items: center;
+      padding: 0px 20px;
+
+      p {
+        @include text-md;
+        color: $white;
+        margin: 0;
+        padding-bottom: 10px;
+      }
+    }
+  }
+}
+
+.inputForm {
+  display: flex;
+  align-items: center;
+  background: $bg-input;
+  border-radius: 16px;
+  border: 1px solid $border-input;
+  margin-bottom: 20px;
+  .append-icon {
+    width: 25px;
+    height: 25px;
+    margin-left: 10px;
+  }
+  input {
+    @include text-md;
+    flex: 1 1 auto;
+    background: none;
+    border: none;
+    height: 40px;
+    padding: 0px 10px;
+
+    color: $white;
+    &::placeholder {
+      @include text-md;
+      color: $white;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+}
+.select-inputForm {
+  background: $bg-input;
+  border-radius: 16px;
+  border: 1px solid $border-input;
+  height: 40px;
+  display: flex;
+  margin-bottom: 20px;
+  position: relative;
+  grid-template-areas: "select";
+  align-items: center;
+  select {
+    @include text-md;
+    appearance: none;
+    background-color: transparent;
+    border: none;
+    margin: 0;
+    width: 100%;
+    z-index: 1;
+    color: $white;
+    padding: 0px 15px;
+    &::-ms-expand {
+      display: none;
+    }
+    outline: none;
+  }
+  select,
+  &::after {
+    grid-area: select;
+  }
+  select:focus + .focus {
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    right: -1px;
+    bottom: -1px;
+    border: 2px solid var(--select-focus);
+    border-radius: inherit;
+  }
+}
+
+.button-white {
+  @include text-md-bold;
+  background: $white;
+  color: $black-base;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid $black-base;
+  height: 40px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.button-orange {
+  @include text-md-bold;
+  background: $bg-orange-gradient;
+  color: $white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid $orange;
+  height: 40px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+.button-orange-rounder {
+  @include text-md-bold;
+  background: none;
+  color: $orange;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid $orange;
+  height: 40px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}

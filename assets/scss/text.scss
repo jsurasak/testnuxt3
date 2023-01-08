@@ -1,0 +1,24 @@
+@mixin text-sm {
+  font-size: 13px;
+}
+@mixin text-md {
+  font-size: 15px;
+}
+@mixin text-lg {
+  font-size: 18px;
+}
+
+@mixin text-sm-bold {
+  @include text-sm;
+  font-weight: bold;
+}
+
+@mixin text-md-bold {
+  @include text-md;
+  font-weight: bold;
+}
+
+@mixin text-lg-bold {
+  @include text-lg;
+  font-weight: bold;
+}
